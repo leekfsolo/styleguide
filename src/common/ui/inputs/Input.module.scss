@@ -1,1 +1,24 @@
 @use "../colors";
+
+.input {
+  input {
+    border-radius: 8px;
+    border: 1px solid colors.$gray-3;
+    outline: none;
+    padding: 18px 12px;
+  }
+
+  &:hover input {
+    border-color: colors.$gray-1;
+  }
+
+  &.focus {
+    input {
+      border-color: colors.$bg-primary;
+    }
+
+    label {
+      color: colors.$bg-primary;
+    }
+  }
+}
