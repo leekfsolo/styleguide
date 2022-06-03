@@ -1,0 +1,71 @@
+@use "./colors";
+
+h1 {
+  font-weight: 500;
+  font-size: 24px;
+  color: colors.$gray-2;
+}
+
+.row-lg,
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+
+  .group {
+    width: 236px;
+
+    .hidden {
+      visibility: hidden;
+    }
+
+    p {
+      font-family: "Ubuntu Mono", monospace;
+      font-size: 12px;
+
+      &.variant-black {
+        color: colors.$black;
+      }
+
+      &.variant-gray-1 {
+        color: colors.$gray-1;
+      }
+
+      &.variant-gray-2 {
+        color: colors.$gray-2;
+      }
+
+      &.variant-gray-3 {
+        color: colors.$gray-3;
+      }
+    }
+  }
+}
+
+.row-lg {
+  .group {
+    width: 300px;
+  }
+}
+
+.note {
+  color: colors.$gray-0;
+
+  p:first-child {
+    font-size: 12px;
+    font-family: "Ubuntu Mono", monospace;
+    margin-bottom: 34px;
+  }
+
+  p:last-child {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 24px;
+    font-weight: 500;
+
+    span {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+}
