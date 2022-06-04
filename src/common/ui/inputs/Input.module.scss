@@ -1,24 +1,134 @@
 @use "../colors";
 
-.input {
-  input {
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  z-index: 1;
+
+  .input {
     border-radius: 8px;
     border: 1px solid colors.$gray-3;
     outline: none;
     padding: 18px 12px;
+    margin: 4px 0;
+
+    &::placeholder {
+      color: colors.$gray-3;
+    }
   }
 
-  &:hover input {
-    border-color: colors.$gray-1;
+  label {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 12px;
+    color: colors.$gray-1;
+  }
+
+  small {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 10px;
+    color: colors.$gray-3;
+  }
+
+  &:hover {
+    .input {
+      border-color: colors.$gray-1;
+    }
+
+    label {
+      color: colors.$gray-1;
+    }
   }
 
   &.focus {
-    input {
+    .input {
       border-color: colors.$bg-primary;
     }
 
     label {
       color: colors.$bg-primary;
     }
+  }
+
+  &.disabled {
+    .input {
+      background-color: colors.$gray-5;
+      cursor: not-allowed;
+    }
+  }
+
+  &.error {
+    label,
+    small {
+      color: colors.$bg-danger !important;
+    }
+
+    .input {
+      border-color: colors.$bg-danger !important;
+    }
+
+    &:hover {
+      .input {
+        border-color: colors.$gray-1 !important;
+      }
+
+      label,
+      small {
+        color: colors.$gray-1 !important;
+      }
+    }
+
+    &.focus {
+      .input {
+        border-color: colors.$bg-danger !important;
+      }
+
+      label,
+      small {
+        color: colors.$bg-danger !important;
+      }
+    }
+  }
+
+  &.startIcon {
+    position: relative;
+
+    .input {
+      padding-left: 45px;
+    }
+
+    svg {
+      position: absolute;
+      top: 45%;
+      left: 12px;
+      z-index: 10;
+      fill: colors.$gray-3;
+    }
+  }
+
+  &.endIcon {
+    position: relative;
+
+    .input {
+      padding-right: 45px;
+    }
+
+    svg {
+      position: absolute;
+      top: 45%;
+      right: 5px;
+      z-index: 10;
+      fill: colors.$gray-3;
+    }
+  }
+
+  &.sm {
+    .input {
+      height: 40px;
+    }
+  }
+
+  &.fullWidth {
+    width: 100%;
   }
 }

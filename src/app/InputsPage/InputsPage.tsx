@@ -15,6 +15,8 @@ const InputsPage = () => {
         <Input disabled />
         <Input helperText="Some interesting text" />
         <Input helperText="Some interesting text" error />
+        <Input startIcon />
+        <Input endIcon />
         <Input value="text" />
         <Input size="sm" />
         <Input size="md" />
