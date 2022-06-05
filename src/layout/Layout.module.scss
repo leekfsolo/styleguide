@@ -1,4 +1,4 @@
-@use "./colors";
+@use "../common/ui/assets/colors";
 
 #main {
   display: grid;
@@ -15,7 +15,7 @@
       font-size: 13px;
 
       .variant {
-        color: colors.$text-variant;
+        color: colors.$title-variant;
       }
     }
 
@@ -30,7 +30,7 @@
         font-family: "Noto sans JP", sans-serif;
         font-weight: 500;
         font-size: 14px;
-        color: colors.$text-default;
+        color: colors.$item-default;
         margin-bottom: 28px;
         display: inline-block;
         cursor: pointer;
@@ -38,13 +38,13 @@
         .hoverBar {
           width: 100%;
           height: 1px;
-          background-color: colors.$text-active;
+          background-color: colors.$item-active;
         }
 
         &.active,
         &:hover,
         &:focus {
-          color: colors.$text-active;
+          color: colors.$item-active;
           font-weight: 700;
         }
       }
