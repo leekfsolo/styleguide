@@ -53,7 +53,7 @@ const Input: FC<Props> = (props: Props) => {
             id={randomId}
             onFocus={() => setIsFocus(true)}
             onBlur={() => setIsFocus(false)}
-            value={value}
+            defaultValue={value}
             className={styles.input}
           ></textarea>
           {helperText ? <small>{helperText}</small> : null}
@@ -68,7 +68,7 @@ const Input: FC<Props> = (props: Props) => {
             id={randomId}
             onFocus={() => setIsFocus(true)}
             onBlur={() => setIsFocus(false)}
-            value={value}
+            defaultValue={value}
             className={styles.input}
             {...disabledAttr}
           ></input>

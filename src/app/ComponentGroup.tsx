@@ -1,17 +1,18 @@
 import React, { FC, ReactNode } from "react";
-import styles from "../Page.module.scss";
+import styles from "./Page.module.scss";
 
 interface Props {
   title?: string;
   variant?: string;
+  fullWidth?: boolean;
   children: ReactNode;
 }
 
-const ButtonGroup: FC<Props> = (props: Props) => {
-  const { title = "", variant = "black", children } = props;
+const ComponentGroup: FC<Props> = (props: Props) => {
+  const { title = "", variant = "gray-1", fullWidth = false, children } = props;
 
   return (
-    <section className={styles.group}>
+    <section className={`${styles.group} ${fullWidth ? styles.fullWidth : ""}`}>
       <p
         className={`${styles["variant-" + variant]} ${
           title === "hidden" ? styles.hidden : ""
@@ -24,4 +25,4 @@ const ButtonGroup: FC<Props> = (props: Props) => {
   );
 };
 
-export default ButtonGroup;
+export default ComponentGroup;

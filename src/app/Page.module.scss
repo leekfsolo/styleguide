@@ -15,6 +15,10 @@ h1 {
   .group {
     width: 236px;
 
+    &.fullWidth {
+      width: 100% !important;
+    }
+
     .hidden {
       visibility: hidden;
     }
@@ -22,6 +26,7 @@ h1 {
     p {
       font-family: "Ubuntu Mono", monospace;
       font-size: 12px;
+      margin-top: 0;
 
       &.variant-black {
         color: colors.$black;
@@ -68,4 +73,8 @@ h1 {
       text-decoration: underline;
     }
   }
+}
+
+.fullWidth {
+  width: 100% !important;
 }
